@@ -90,3 +90,9 @@ footer { color: var(--muted); text-align: center; font-size: 0.9rem; padding: 18
   .result-header { flex-direction: column; }
   .confidence { text-align: left; }
 }
+
+.debug-scores {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #57606a;
+}
