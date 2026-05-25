@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epidemiology Research Aim Classifier</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Epidemiology tool</p>
+      <h1>Research Aim Classifier</h1>
+      <p class="subtitle">Classify epidemiologic research questions as Descriptive, Analytic, Predictive, or Prescriptive.</p>
+    </section>
+
+    <section class="card">
+      <label for="question">Paste a research question</label>
+      <textarea id="question" rows="7" placeholder="Example: Can EHR data predict 30-day hospitalization among patients with COPD?"></textarea>
+      <div class="actions">
+        <button id="classifyBtn">Classify</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+      </div>
+    </section>
+
+    <section id="result" class="card result hidden" aria-live="polite">
+      <div class="result-header">
+        <div>
+          <p class="small-label">Classification</p>
+          <h2 id="label">—</h2>
+        </div>
+        <div class="confidence">
+          <p class="small-label">Confidence</p>
+          <p id="confidence">—</p>
+        </div>
+      </div>
+      <p id="reason"></p>
+    </section>
+
+    <section class="grid">
+      <article class="mini-card">
+        <h3>Descriptive</h3>
+        <p>Prevalence, incidence, burden, rates, distributions, surveillance, trends, and population characterization.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Analytic</h3>
+        <p>Associations, exposure-outcome relationships, causal effects, risk factors, adjusted estimates, and hypothesis testing.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Predictive</h3>
+        <p>Forecasting, risk prediction, classification, model development, validation, calibration, AUC, and prediction scores.</p>
+      </article>
+      <article class="mini-card">
+        <h3>Prescriptive</h3>
+        <p>Recommendations, decision support, treatment or intervention selection, policy optimization, and action rules.</p>
+      </article>
+    </section>
+
+    <section class="card examples">
+      <h2>Try examples</h2>
+      <div class="example-buttons">
+        <button class="example" data-question="What is the prevalence of diabetes among adults aged 40-65 in northern Israel?">Descriptive example</button>
+        <button class="example" data-question="Is smoking associated with hospitalization for COPD after adjustment for age and comorbidity?">Analytic example</button>
+        <button class="example" data-question="Can electronic health record data predict 30-day hospitalization among patients with COPD?">Predictive example</button>
+        <button class="example" data-question="Which patients should receive intensive outreach to improve colorectal cancer screening uptake?">Prescriptive example</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>This rule-based educational classifier is intended to support research triage. Borderline questions should be reviewed by an epidemiologist.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
